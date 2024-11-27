@@ -1,0 +1,163 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background-color: #f8f9fa;
+    background-image: url('https://cdn.pixabay.com/photo/2016/11/22/19/15/christmas-1850474_1280.jpg'); /* Fondo navideño */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Encabezado */
+.header {
+    text-align: center;
+    background-color: #cf2a27; /* Rojo típico de la bandera de Venezuela y Navidad */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header::before {
+    content: "🎄";
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 30px;
+}
+
+.header::after {
+    content: "🇻🇪";
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+}
+
+/* Sección de agregar participantes */
+.add-participant {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.add-participant h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #008542; /* Verde navideño */
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+    max-width: 300px;
+    background-color: #fffbf2; /* Color claro como hallaca */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #cf2a27; /* Rojo bandera/navidad */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b01f1b; /* Tono más oscuro */
+}
+
+/* Lista de participantes */
+.participant-list {
+    margin: 20px 0;
+}
+
+.participant-list h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #008542;
+}
+
+.participant-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.participant-list li {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Botón de sorteo */
+.draw {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.draw-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ffd700; /* Amarillo bandera venezolana */
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+.draw-button:hover {
+    background-color: #ffcc00; /* Tono más brillante */
+    transform: scale(1.05);
+}
+
+/* Pie de página */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer p {
+    font-weight: bold;
+    color: #cf2a27; /* Rojo bandera */
+}
+
+

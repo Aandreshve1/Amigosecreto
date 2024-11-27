@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amigo Secreto</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- EmailJS Library -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🎁 Sorteo de Amigo Secreto</h1>
+        </header>
+        <main>
+            <section class="add-participant">
+                <h2>Agregar Participantes</h2>
+                <div class="form-group">
+                    <input type="text" id="participantName" placeholder="Nombre del participante" />
+                    <input type="email" id="participantEmail" placeholder="Correo del participante" />
+                    <button id="addParticipant">Agregar</button>
+                </div>
+            </section>
+            <section class="participant-list">
+                <h2>Lista de Participantes</h2>
+                <ul id="participants">
+                    <!-- Los participantes se mostrarán aquí -->
+                </ul>
+            </section>
+            <section class="draw">
+                <button id="startDraw" class="draw-button">Hacer el Sorteo</button>
+            </section>
+        </main>
+        <footer class="footer">
+            <p>Desarrollado con ❤️ para hacer tu intercambio de regalos más divertido.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
