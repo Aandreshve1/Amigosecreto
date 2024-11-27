@@ -1,4 +1,4 @@
-// Inicializar EmailJS con tu User ID
+// Inicializar EmailJS con tu Public Key
 emailjs.init("Gs0UE7dxgfZXAQdr5");
 
 const participants = []; // Lista de participantes
