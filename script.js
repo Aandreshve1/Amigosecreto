@@ -43,7 +43,7 @@ function updateParticipantsList() {
     });
 }
 
-// Realizar el sorteo
+// Realizar el sorteo con retraso entre envíos
 startDrawButton.addEventListener('click', () => {
     if (participants.length < 2) {
         alert("Necesitas al menos 2 participantes para el sorteo.");
@@ -53,13 +53,19 @@ startDrawButton.addEventListener('click', () => {
     const shuffled = [...participants];
     shuffled.sort(() => Math.random() - 0.5); // Mezclar participantes
 
-    for (let i = 0; i < shuffled.length; i++) {
-        const giver = shuffled[i];
-        const receiver = shuffled[(i + 1) % shuffled.length]; // Circular
-        sendNotification(giver, receiver); // Enviar notificación por correo
-    }
+    const sendEmailsWithDelay = async () => {
+        for (let i = 0; i < shuffled.length; i++) {
+            const giver = shuffled[i];
+            const receiver = shuffled[(i + 1) % shuffled.length]; // Circular
 
-    alert("¡Sorteo completado! Las notificaciones han sido enviadas.");
+            await new Promise(resolve => setTimeout(resolve, 1000)); // 1 segundo de retraso
+            sendNotification(giver, receiver); // Enviar notificación por correo
+        }
+    };
+
+    sendEmailsWithDelay()
+        .then(() => alert("¡Sorteo completado! Las notificaciones han sido enviadas."))
+        .catch(error => console.error("Error en el sorteo:", error));
 });
 
 // Enviar correo real con EmailJS
@@ -81,5 +87,6 @@ function sendNotification(giver, receiver) {
             }
         );
 }
+
 
 
