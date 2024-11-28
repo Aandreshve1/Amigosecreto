@@ -58,7 +58,7 @@ startDrawButton.addEventListener('click', () => {
             const giver = shuffled[i];
             const receiver = shuffled[(i + 1) % shuffled.length]; // Circular
 
-            await new Promise(resolve => setTimeout(resolve, 1000)); // 1 segundo de retraso
+            await new Promise(resolve => setTimeout(resolve, 5000)); // 1 segundo de retraso
             sendNotification(giver, receiver); // Enviar notificación por correo
         }
     };
