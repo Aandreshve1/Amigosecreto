@@ -50,6 +50,8 @@ startDrawButton.addEventListener('click', () => {
         return;
     }
 
+    alert("¡Sorteo en progreso! Los correos se están enviando...");
+
     const shuffled = [...participants];
     shuffled.sort(() => Math.random() - 0.5); // Mezclar participantes
 
@@ -64,7 +66,6 @@ startDrawButton.addEventListener('click', () => {
     };
 
     sendEmailsWithDelay()
-        .then(() => alert("¡Sorteo completado! Las notificaciones han sido enviadas."))
         .catch(error => console.error("Error en el sorteo:", error));
 });
 
@@ -87,6 +88,3 @@ function sendNotification(giver, receiver) {
             }
         );
 }
-
-
-
